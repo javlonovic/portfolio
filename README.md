@@ -54,8 +54,7 @@ This is a Django-based portfolio project. It showcases skills, projects, social 
 
 1. **Clone the repository**:
     ```bash
-    git clone <repository-url>
-    cd Just bosd
+    git clone https://github.com/javlonovic/portfolio
     ```
 
 2. **Create a virtual environment**:
