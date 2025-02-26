@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.name }} | Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+    <link rel="icon" href="{% static 'portfolio/images/favicon.svg' %}">
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">{{ profile.name }}</a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <div class="toggle-thumb"></div>
+        </div>
+        <button class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="parallax-bg">
+                <div class="parallax-shape shape1"></div>
+                <div class="parallax-shape shape2"></div>
+                <div class="parallax-shape shape3"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Hello, I'm <span class="highlight">{{ profile.name }}</span></h1>
+                <p>{{ profile.bio }}</p>
+                <div>
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    {% for link in social_links %}
+                        <a href="{{ link.url }}" target="_blank"><i class="{{ link.icon_class }}"></i></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title fade-in">My Skills</h2>
+            <div class="skills-container">
+                {% for skill in skills %}
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon">
+                            <i class="{{ skill.icon_class }}"></i>
+                        </div>
+                        <h3 class="skill-title">{{ skill.name }}</h3>
+                        <p>{{ skill.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title fade-in">My Projects</h2>
+            <div class="projects-grid">
+                {% for project in projects %}
+                    <div class="project-card fade-in">
+                        <div class="project-img">
+                            {% if project.image %}
+                                <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                            {% else %}
+                                <i class="{{ project.icon_class }}"></i>
+                            {% endif %}
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">{{ project.title }}</h3>
+                            <p>{{ project.description }}</p>
+                            <div class="project-tech">
+                                {% for tech in project.technologies.all %}
+                                    <span class="tech-tag">{{ tech.name }}</span>
+                                {% endfor %}
+                            </div>
+                            <div class="project-links">
+                                {% if project.github_url %}
+                                    <a href="{{ project.github_url }}" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                {% endif %}
+                                {% if project.live_url %}
+                                    <a href="{{ project.live_url }}" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <div class="contact fade-in">
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <form method="post" action="{% url 'portfolio:contact' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope fa-fade"></i>
+                            </div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>javlonovic@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram fa-fade"></i>
+                            </div>
+                            <div>
+                                <h3>Telegram</h3>
+                                <p><a href="https://t.me/bos1dd" style="color: var(--primary-color); text-decoration: none;">@bos1dd</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-github fa-fade"></i>
+                            </div>
+                            <div>
+                                <h3>GitHub</h3>
+                                <p><a href="https://github.com/javlonovic" style="color: var(--primary-color); text-decoration: none;">@javlonovic</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt fa-fade"></i>
+                            </div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Uzbekistan Tashkent city.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {% now "Y" %} {{ profile.name }}. All rights reserved.</p>
+    </footer>
+
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">
+                {{ message }}
+                <button class="close-message"><i class="fas fa-times"></i></button>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <script src="{% static 'portfolio/js/script.js' %}"></script>
+</body>
+</html>
