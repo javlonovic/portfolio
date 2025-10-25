@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Abdulbasit Ziyayev Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="articles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">ZA</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link active">Articles</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Articles Hero Section -->
+    <section class="articles-hero">
+        <div class="container">
+            <div class="articles-hero-content">
+                <h1>Latest Articles</h1>
+                <p>Insights, tutorials, and thoughts on modern web development</p>
+                <div class="articles-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Readers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-main">
+        <div class="container">
+            <div class="articles-grid-full">
+                <!-- Article 1 -->
+                <article class="article-card-full" data-category="javascript">
+                    <div class="article-image-full">
+                        <img src="https://static.vecteezy.com/system/resources/previews/051/336/397/non_2x/javascript-transparent-logo-free-png.png"
+                            alt="JavaScript Tips">
+                        <div class="article-overlay">
+                            <a href="article-detail.html?id=1" class="read-article-btn">
+                                <i class="fas fa-book-open"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta-top">
+                            <span class="article-category">JavaScript</span>
+                            <span class="article-date">December 15, 2024</span>
+                        </div>
+                        <h2>10 JavaScript Tips Every Developer Should Know</h2>
+                        <p>Discover essential JavaScript techniques that will improve your code quality and development
+                            efficiency. From modern ES6+ features to performance optimization tricks.</p>
+                        <div class="article-tags">
+                            <span class="tag">ES6+</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Best Practices</span>
+                        </div>
+                        <div class="article-footer">
+                            <div class="article-stats">
+                                <span><i class="fas fa-clock"></i> 5 min read</span>
+                                <span><i class="fas fa-eye"></i> 1.2K views</span>
+                                <span><i class="fas fa-heart"></i> 89 likes</span>
+                            </div>
+                            <a href="article-detail.html?id=1" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card-full" data-category="react">
+                    <div class="article-image-full">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThFGBTwrc-m2PX_3YlVq-RcE25W8wv96dBTw&s"
+                            alt="React Hooks">
+                        <div class="article-overlay">
+                            <a href="article-detail.html?id=2" class="read-article-btn">
+                                <i class="fas fa-book-open"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta-top">
+                            <span class="article-category">React</span>
+                            <span class="article-date">December 12, 2024</span>
+                        </div>
+                        <h2>Mastering React Hooks: A Complete Guide</h2>
+                        <p>Learn how to effectively use React Hooks to build more efficient and maintainable components.
+                            Covers useState, useEffect, custom hooks, and advanced patterns.</p>
+                        <div class="article-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Hooks</span>
+                            <span class="tag">Components</span>
+                        </div>
+                        <div class="article-footer">
+                            <div class="article-stats">
+                                <span><i class="fas fa-clock"></i> 8 min read</span>
+                                <span><i class="fas fa-eye"></i> 2.1K views</span>
+                                <span><i class="fas fa-heart"></i> 156 likes</span>
+                            </div>
+                            <a href="article-detail.html?id=2" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Article 3 -->
+                <article class="article-card-full" data-category="nodejs">
+                    <div class="article-image-full">
+                        <img src="https://static.vecteezy.com/system/resources/previews/060/194/950/non_2x/node-js-framework-3d-icon-transparent-background-free-png.png"
+                            alt="Node.js API">
+                        <div class="article-overlay">
+                            <a href="article-detail.html?id=3" class="read-article-btn">
+                                <i class="fas fa-book-open"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta-top">
+                            <span class="article-category">Node.js</span>
+                            <span class="article-date">December 8, 2024</span>
+                        </div>
+                        <h2>Building Scalable APIs with Node.js</h2>
+                        <p>Best practices for creating robust and scalable REST APIs using Node.js and Express
+                            framework. Includes authentication, error handling, and database optimization.</p>
+                        <div class="article-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">API Design</span>
+                        </div>
+                        <div class="article-footer">
+                            <div class="article-stats">
+                                <span><i class="fas fa-clock"></i> 12 min read</span>
+                                <span><i class="fas fa-eye"></i> 1.8K views</span>
+                                <span><i class="fas fa-heart"></i> 134 likes</span>
+                            </div>
+                            <a href="article-detail.html?id=3" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card-full" data-category="css">
+                    <div class="article-image-full">
+                        <img src="https://static.vecteezy.com/system/resources/previews/051/336/376/non_2x/css-programming-transparent-logo-free-png.png"
+                            alt="CSS Grid">
+                        <div class="article-overlay">
+                            <a href="article-detail.html?id=4" class="read-article-btn">
+                                <i class="fas fa-book-open"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta-top">
+                            <span class="article-category">CSS</span>
+                            <span class="article-date">December 5, 2024</span>
+                        </div>
+                        <h2>Modern CSS Grid Layouts Made Simple</h2>
+                        <p>Master CSS Grid to create complex, responsive layouts with clean and maintainable code. Learn
+                            grid areas, auto-placement, and advanced techniques.</p>
+                        <div class="article-tags">
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">Layout</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="article-footer">
+                            <div class="article-stats">
+                                <span><i class="fas fa-clock"></i> 6 min read</span>
+                                <span><i class="fas fa-eye"></i> 950 views</span>
+                                <span><i class="fas fa-heart"></i> 67 likes</span>
+                            </div>
+                            <a href="article-detail.html?id=4" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Abdulbasit Ziyayev Developer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="articles.js"></script>
+</body>
+
+</html>
