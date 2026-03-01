@@ -1,298 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdulbasit Ziyayev - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdulbasit Ziyayev — Full Stack Developer</title>
+  <meta name="description" content="Abdulbasit Ziyayev — Full Stack Developer. Python, Django, Vue.js, Flutter. Building elegant, high-performance digital products. Open to big tech opportunities." />
+  <meta name="keywords" content="Abdulbasit Ziyayev, Full Stack Developer, Python, Django, Vue.js, Flutter, Portfolio, Uzbekistan" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">ZA</a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#articles" class="nav-link">Articles</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="noise"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Abdulbasit Ziyayev</span>
-                </h1>
-                <p class="hero-subtitle">Full Stack Developer & Problem Solver</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#articles" class="btn btn-secondary">Read Articles</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <img src="profile_pic.jpg" alt="Profile Picture" class="profile-img">
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo"><span class="lb">[</span>AZ<span class="lb">]</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+        <li><a href="#skills" class="nav-link" data-text="Stack">Stack</a></li>
+        <li><a href="#projects" class="nav-link" data-text="Work">Work</a></li>
+        <li><a href="articles.html" class="nav-link" data-text="Writing">Writing</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me <i class="fas fa-arrow-right"></i></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="m-link">About</a>
+      <a href="#skills" class="m-link">Stack</a>
+      <a href="#projects" class="m-link">Work</a>
+      <a href="articles.html" class="m-link">Writing</a>
+      <a href="#contact" class="m-link m-cta">Hire Me</a>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate full-stack developer with 3+ years of experience
-                        creating digital solutions that make a difference. I love turning
-                        complex problems into simple, beautiful designs.
-                    </p>
-                    <p>
-                        When I'm not coding, you can find me exploring new technologies,
-                        contributing to open source projects, or enjoying a good cup of coffee
-                        while planning my next project.
-                    </p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>100%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="profile_pic.jpg" alt="About Me">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>Frontend</h3>
-                    <p>HTML5, CSS3, JavaScript</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Backend</h3>
-                    <p>Python, Django</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Database</h3>
-                    <p>MySQL, MongoDB</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="80%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-label"><span class="pulse-dot"></span>Available for opportunities</div>
+      <h1 class="hero-name">
+        <span class="hn-1">Abdulbasit</span>
+        <span class="hn-2">Ziyayev</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">// </span><span id="roleText"></span><span class="blink">█</span>
+      </div>
+      <p class="hero-desc">
+        Full Stack Developer crafting high-performance products with Python, Django, Vue.js &amp; Flutter.
+        Currently building <a href="https://absspro.uz/uz/" target="_blank" class="il">AB Sales Staff Pro</a>
+        — a live SaaS serving businesses across Uzbekistan.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="hbtn primary">View My Work <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="hbtn ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-aside">
+      <div class="photo-wrap">
+        <div class="photo-ring ring1"></div>
+        <div class="photo-ring ring2"></div>
+        <img src="profile_pic.jpg" alt="Abdulbasit Ziyayev" class="hero-photo" />
+        <div class="photo-badge"><i class="fas fa-code"></i> Full Stack Dev</div>
+      </div>
+      <div class="hero-counters">
+        <div class="hc"><span class="hc-n" data-target="50">0</span><sup>+</sup><div class="hc-l">Projects</div></div>
+        <div class="hc-sep"></div>
+        <div class="hc"><span class="hc-n" data-target="3">0</span><sup>+</sup><div class="hc-l">Years</div></div>
+        <div class="hc-sep"></div>
+        <div class="hc"><span class="hc-n" data-target="100">0</span><sup>%</sup><div class="hc-l">Satisfied</div></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-bar"></div>
+      <span>scroll</span>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://cdn.prod.website-files.com/5ee12d8d7f840543bde883de/5ef3a1148ac97166a06253c1_flutter-logo-white-inset.svg" alt="Project 1">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/javlonovic/shop_flutter" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Flutter shop</h3>
-                        <p>The app created using Flutter extencion of programming language Dart</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://cdn.prod.website-files.com/5ee12d8d7f840543bde883de/5ef3a1148ac97166a06253c1_flutter-logo-white-inset.svg" alt="Project 2">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Library</h3>
-                        <p>Collaborative book management tool with real-time updates</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">Frontend</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1752126013459-e3ujdct2ndl.png" alt="Project 3">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://absspro.uz/uz/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>AB SALES STAFF PRO</h3>
-                        <p>First app with basic functionality</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">API</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-inner" id="marqueeInner">
+        <span>Python</span><em>·</em><span>Django</span><em>·</em><span>Vue.js</span><em>·</em>
+        <span>Flutter</span><em>·</em><span>Dart</span><em>·</em><span>MySQL</span><em>·</em>
+        <span>MongoDB</span><em>·</em><span>JavaScript</span><em>·</em><span>REST APIs</span><em>·</em>
+        <span>Node.js</span><em>·</em><span>React</span><em>·</em><span>HTML/CSS</span><em>·</em>
+        <span>Python</span><em>·</em><span>Django</span><em>·</em><span>Vue.js</span><em>·</em>
+        <span>Flutter</span><em>·</em><span>Dart</span><em>·</em><span>MySQL</span><em>·</em>
+        <span>MongoDB</span><em>·</em><span>JavaScript</span><em>·</em><span>REST APIs</span><em>·</em>
+        <span>Node.js</span><em>·</em><span>React</span><em>·</em><span>HTML/CSS</span><em>·</em>
+      </div>
+    </div>
+  </div>
 
-    <!-- Articles Section -->
-    <section id="articles" class="articles">
-        <div class="container">
-            <h2 class="section-title">Latest Articles</h2>
-            <div class="articles-grid">
-                <article class="article-card" data-id="1">
-                    <div class="article-image">
-                        <img src="https://static.vecteezy.com/system/resources/previews/051/336/397/non_2x/javascript-transparent-logo-free-png.png" alt="JavaScript Tips">
-                        <div class="article-date">
-                            <span class="day">15</span>
-                            <span class="month">Dec</span>
-                        </div>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-category">JavaScript</div>
-                        <h3>10 JavaScript Tips Every Developer Should Know</h3>
-                        <p>Discover essential JavaScript techniques that will improve your code quality and development
-                            efficiency.</p>
-                        <div class="article-meta">
-                            <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
-                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="article-card" data-id="2">
-                    <div class="article-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThFGBTwrc-m2PX_3YlVq-RcE25W8wv96dBTw&s" alt="React Hooks">
-                        <div class="article-date">
-                            <span class="day">12</span>
-                            <span class="month">Dec</span>
-                        </div>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-category">React</div>
-                        <h3>Mastering React Hooks: A Complete Guide</h3>
-                        <p>Learn how to effectively use React Hooks to build more efficient and maintainable components.
-                        </p>
-                        <div class="article-meta">
-                            <span class="read-time"><i class="fas fa-clock"></i> 8 min read</span>
-                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="article-card" data-id="3">
-                    <div class="article-image">
-                        <img src="https://static.vecteezy.com/system/resources/previews/060/194/950/non_2x/node-js-framework-3d-icon-transparent-background-free-png.png" alt="Node.js API">
-                        <div class="article-date">
-                            <span class="day">08</span>
-                            <span class="month">Dec</span>
-                        </div>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-category">Node.js</div>
-                        <h3>Building Scalable APIs with Node.js</h3>
-                        <p>Best practices for creating robust and scalable REST APIs using Node.js and Express
-                            framework.</p>
-                        <div class="article-meta">
-                            <span class="read-time"><i class="fas fa-clock"></i> 12 min read</span>
-                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="article-card" data-id="4">
-                    <div class="article-image">
-                        <img src="https://static.vecteezy.com/system/resources/previews/051/336/376/non_2x/css-programming-transparent-logo-free-png.png">
-                        <div class="article-date">
-                            <span class="day">05</span>
-                            <span class="month">Dec</span>
-                        </div>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-category">CSS</div>
-                        <h3>Modern CSS Grid Layouts Made Simple</h3>
-                        <p>Master CSS Grid to create complex, responsive layouts with clean and maintainable code.</p>
-                        <div class="article-meta">
-                            <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
-                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="articles-footer">
-                <a href="#" class="btn btn-primary">View All Articles</a>
-            </div>
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="sc">
+      <div class="sh">
+        <span class="stag">01 / About</span>
+        <h2 class="stitle">The Story So Far</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="ap lead">I'm a <strong>Full Stack Developer</strong> based in Uzbekistan, obsessed with building software that actually matters — clean code, smart architecture, real-world impact.</p>
+          <p class="ap">Over 3+ years I've shipped cross-platform mobile apps in Flutter, SaaS platforms serving paying customers, REST APIs powering business-critical workflows, and responsive frontends with Vue.js. My stack is broad but my philosophy is consistent: <em>ship clean, iterate fast, never stop learning.</em></p>
+          <p class="ap">Currently building <strong>AB Sales Staff Pro</strong>, a B2B sales management SaaS live at <a href="https://absspro.uz/uz/" target="_blank" class="il">absspro.uz</a>. When I'm not coding I'm writing developer guides or exploring new tech.</p>
+          <div class="about-socials">
+            <a href="https://github.com/javlonovic" target="_blank" class="sp"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="sp"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:hello@abdulbasit.dev" class="sp"><i class="fas fa-envelope"></i> Email</a>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2022 Abdulbasit Ziyayev Developer. All rights reserved.</p>
+        <div class="about-card reveal">
+          <div class="terminal">
+            <div class="term-top">
+              <span class="td r"></span><span class="td y"></span><span class="td g"></span>
+              <span class="tname">abdulbasit.json</span>
+            </div>
+            <pre class="term-code"><span class="tb">{</span>
+  <span class="tk">"name"</span>: <span class="ts">"Abdulbasit Ziyayev"</span>,
+  <span class="tk">"role"</span>: <span class="ts">"Full Stack Dev"</span>,
+  <span class="tk">"location"</span>: <span class="ts">"Uzbekistan 🇺🇿"</span>,
+  <span class="tk">"experience"</span>: <span class="tn">3</span>,
+  <span class="tk">"primaryStack"</span>: [
+    <span class="ts">"Python"</span>, <span class="ts">"Django"</span>,
+    <span class="ts">"Vue.js"</span>, <span class="ts">"Flutter"</span>
+  ],
+  <span class="tk">"databases"</span>: [<span class="ts">"MySQL"</span>, <span class="ts">"MongoDB"</span>],
+  <span class="tk">"openToWork"</span>: <span class="tg">true</span>,
+  <span class="tk">"coffeePerDay"</span>: <span class="tn">4</span>
+<span class="tb">}</span></pre>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- SKILLS -->
+  <section id="skills" class="section skills-section">
+    <div class="sc">
+      <div class="sh">
+        <span class="stag">02 / Stack</span>
+        <h2 class="stitle">What I Build With</h2>
+      </div>
+      <div class="skill-groups">
+        <div class="sg reveal">
+          <div class="sg-label"><i class="fas fa-server"></i> Backend</div>
+          <div class="sg-list">
+            <div class="si"><div class="si-head"><span class="si-icon"><i class="fab fa-python"></i></span><span class="si-name">Python</span><span class="si-pct">92%</span></div><div class="si-bar"><div class="si-fill" data-w="92"></div></div></div>
+            <div class="si"><div class="si-head"><span class="si-icon">🦄</span><span class="si-name">Django</span><span class="si-pct">88%</span></div><div class="si-bar"><div class="si-fill" data-w="88"></div></div></div>
+            <div class="si"><div class="si-head"><span class="si-icon"><i class="fab fa-node-js"></i></span><span class="si-name">Node.js</span><span class="si-pct">75%</span></div><div class="si-bar"><div class="si-fill" data-w="75"></div></div></div>
+          </div>
+        </div>
+        <div class="sg reveal">
+          <div class="sg-label"><i class="fas fa-desktop"></i> Frontend</div>
+          <div class="sg-list">
+            <div class="si"><div class="si-head"><span class="si-icon">⚡</span><span class="si-name">Vue.js</span><span class="si-pct">85%</span></div><div class="si-bar"><div class="si-fill" data-w="85"></div></div></div>
+            <div class="si"><div class="si-head"><span class="si-icon"><i class="fab fa-js"></i></span><span class="si-name">JavaScript</span><span class="si-pct">90%</span></div><div class="si-bar"><div class="si-fill" data-w="90"></div></div></div>
+            <div class="si"><div class="si-head"><span class="si-icon"><i class="fab fa-html5"></i></span><span class="si-name">HTML/CSS</span><span class="si-pct">95%</span></div><div class="si-bar"><div class="si-fill" data-w="95"></div></div></div>
+          </div>
+        </div>
+        <div class="sg reveal">
+          <div class="sg-label"><i class="fas fa-mobile-alt"></i> Mobile</div>
+          <div class="sg-list">
+            <div class="si"><div class="si-head"><span class="si-icon">📱</span><span class="si-name">Flutter</span><span class="si-pct">80%</span></div><div class="si-bar"><div class="si-fill" data-w="80"></div></div></div>
+            <div class="si"><div class="si-head"><span class="si-icon">🎯</span><span class="si-name">Dart</span><span class="si-pct">78%</span></div><div class="si-bar"><div class="si-fill" data-w="78"></div></div></div>
+          </div>
+        </div>
+        <div class="sg reveal">
+          <div class="sg-label"><i class="fas fa-database"></i> Data</div>
+          <div class="sg-list">
+            <div class="si"><div class="si-head"><span class="si-icon">🗃️</span><span class="si-name">MySQL</span><span class="si-pct">82%</span></div><div class="si-bar"><div class="si-fill" data-w="82"></div></div></div>
+            <div class="si"><div class="si-head"><span class="si-icon">🍃</span><span class="si-name">MongoDB</span><span class="si-pct">78%</span></div><div class="si-bar"><div class="si-fill" data-w="78"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="sc">
+      <div class="sh">
+        <span class="stag">03 / Work</span>
+        <h2 class="stitle">Featured Projects</h2>
+      </div>
+
+      <!-- Featured Project -->
+      <div class="featured-project reveal">
+        <div class="fp-info">
+          <span class="fp-index">01</span>
+          <span class="fp-type">Live SaaS Product</span>
+          <h3 class="fp-name">AB Sales Staff Pro</h3>
+          <p class="fp-desc">A full-featured B2B sales management SaaS platform built for Uzbek businesses. Real-time analytics, staff performance tracking, custom CRM, and automated reporting. Currently live with active paying customers.</p>
+          <div class="fp-stack"><span>Vue.js</span><span>Python</span><span>Django</span><span>MySQL</span><span>REST API</span></div>
+          <a href="https://absspro.uz/uz/" target="_blank" class="fp-link"><i class="fas fa-external-link-alt"></i> Visit Live Site</a>
+        </div>
+        <div class="fp-mock">
+          <div class="mock-browser">
+            <div class="mb-bar"><span></span><span></span><span></span><div class="mb-url">absspro.uz</div></div>
+            <div class="mb-content">
+              <div class="mb-title">AB Sales Staff Pro</div>
+              <div class="mb-metrics">
+                <div class="mm"><div class="mm-val">124</div><div class="mm-lbl">Users</div></div>
+                <div class="mm"><div class="mm-val">98%</div><div class="mm-lbl">Uptime</div></div>
+                <div class="mm"><div class="mm-val">+34%</div><div class="mm-lbl">Growth</div></div>
+              </div>
+              <div class="mb-chart">
+                <div class="cb" style="height:38%"></div>
+                <div class="cb" style="height:62%"></div>
+                <div class="cb" style="height:50%"></div>
+                <div class="cb" style="height:78%"></div>
+                <div class="cb" style="height:68%"></div>
+                <div class="cb" style="height:88%"></div>
+                <div class="cb active" style="height:100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Cards -->
+      <div class="proj-grid">
+        <div class="pc reveal">
+          <div class="pc-hd">
+            <div class="pci flutter"><i class="fas fa-shopping-bag"></i></div>
+            <a href="https://github.com/javlonovic/shop_flutter" target="_blank" class="pc-gh"><i class="fab fa-github"></i></a>
+          </div>
+          <h4 class="pct">Flutter Shop</h4>
+          <p class="pcd">Cross-platform mobile e-commerce app. Full shopping flow with cart, checkout, and real-time inventory via Node.js + MongoDB backend.</p>
+          <div class="pcs"><span>Flutter</span><span>Dart</span><span>Node.js</span><span>MongoDB</span></div>
+        </div>
+        <div class="pc reveal">
+          <div class="pc-hd">
+            <div class="pci dj"><i class="fas fa-book-open"></i></div>
+            <a href="#" class="pc-gh"><i class="fab fa-github"></i></a>
+          </div>
+          <h4 class="pct">Digital Library</h4>
+          <p class="pcd">Collaborative book management system. Django REST backend powers a responsive frontend with search, borrowing, and review features.</p>
+          <div class="pcs"><span>Python</span><span>Django</span><span>REST</span><span>HTML/CSS</span></div>
+        </div>
+        <div class="pc reveal">
+          <div class="pc-hd">
+            <div class="pci vue"><i class="fas fa-code"></i></div>
+            <a href="https://github.com/javlonovic/portfolio" target="_blank" class="pc-gh"><i class="fab fa-github"></i></a>
+          </div>
+          <h4 class="pct">Dev Portfolio</h4>
+          <p class="pcd">This portfolio — with a dynamic article system, skills showcase, and project gallery. Zero frameworks, pure HTML/CSS/JS.</p>
+          <div class="pcs"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="articles" class="section writing-section">
+    <div class="sc">
+      <div class="sh">
+        <span class="stag">04 / Writing</span>
+        <h2 class="stitle">Latest Articles</h2>
+      </div>
+      <div class="writing-grid">
+        <a href="article-detail.html?id=1" class="wc reveal">
+          <span class="wc-cat">JavaScript</span>
+          <h3 class="wc-title">10 JavaScript Tips Every Developer Should Know</h3>
+          <p class="wc-desc">Destructuring, async/await, memoization — essential techniques to immediately level up your JS.</p>
+          <div class="wc-foot"><span class="wc-time"><i class="fas fa-clock"></i> 5 min read</span><span class="wc-arr">→</span></div>
+        </a>
+        <a href="article-detail.html?id=2" class="wc reveal">
+          <span class="wc-cat">React</span>
+          <h3 class="wc-title">Mastering React Hooks: A Complete Guide</h3>
+          <p class="wc-desc">Deep dive into useState, useEffect, and custom hooks for clean, modern React components.</p>
+          <div class="wc-foot"><span class="wc-time"><i class="fas fa-clock"></i> 8 min read</span><span class="wc-arr">→</span></div>
+        </a>
+        <a href="article-detail.html?id=3" class="wc reveal">
+          <span class="wc-cat">Node.js</span>
+          <h3 class="wc-title">Building Scalable APIs with Node.js</h3>
+          <p class="wc-desc">Production-grade Express apps with proper error handling, rate limiting, and optimised queries.</p>
+          <div class="wc-foot"><span class="wc-time"><i class="fas fa-clock"></i> 12 min read</span><span class="wc-arr">→</span></div>
+        </a>
+        <a href="article-detail.html?id=4" class="wc reveal">
+          <span class="wc-cat">CSS</span>
+          <h3 class="wc-title">Modern CSS Grid Layouts Made Simple</h3>
+          <p class="wc-desc">Grid areas, auto-placement, and responsive techniques to stop fighting with layouts forever.</p>
+          <div class="wc-foot"><span class="wc-time"><i class="fas fa-clock"></i> 6 min read</span><span class="wc-arr">→</span></div>
+        </a>
+      </div>
+      <div class="writing-footer">
+        <a href="articles.html" class="btn-outline">View All Articles <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="sc">
+      <div class="contact-box reveal">
+        <span class="stag">05 / Contact</span>
+        <h2 class="contact-h">Let's Build<br><span class="accent">Something Great</span></h2>
+        <p class="contact-p">I'm actively looking for my next big challenge. Full-time at a top tech company or an exciting project — let's talk.</p>
+        <div class="contact-btns">
+          <a href="mailto:abdulbasit@example.com" class="cbtn primary"><i class="fas fa-envelope"></i> Send Email</a>
+          <a href="https://github.com/javlonovic" target="_blank" class="cbtn ghost"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://absspro.uz/uz/" target="_blank" class="cbtn ghost"><i class="fas fa-globe"></i> absspro.uz</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="sf-inner">
+      <span class="sf-logo"><span class="lb">[</span>AZ<span class="lb">]</span></span>
+      <span class="sf-copy">© 2025 Abdulbasit Ziyayev — Built with passion.</span>
+      <div class="sf-links">
+        <a href="https://github.com/javlonovic" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://absspro.uz/uz/" target="_blank"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
